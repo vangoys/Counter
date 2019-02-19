@@ -142,6 +142,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OvL-G8-4dS">
                                         <rect key="frame" x="0.0" y="183.5" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="stepperChanged:" destination="h9k-6A-VS3" eventType="valueChanged" id="YAK-fa-Ge3"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>

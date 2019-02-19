@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         stepper.autorepeat = true
-        stepper.maximumValue = 1000
+        stepper.maximumValue = 10000
         
         if let finalCount = receivedCount {
             countLabel.text = String(finalCount)
@@ -57,11 +57,10 @@ class DetailViewController: UIViewController {
 
     @IBAction func stepperChanged(_ sender: UIStepper) {
     let count: Int = Int(sender.value)
-        if (count == 1000) {
-            countLabel.text = "1K"
-        } else {
-            countLabel.text = String(count)
-        }
+        
+
+           countLabel.text = String(count)
+
         updateCount()
     }
     

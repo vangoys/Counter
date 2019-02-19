@@ -37,7 +37,7 @@ class AddCounterViewController: UIViewController, UITextFieldDelegate {
         
         
         stepper.autorepeat = true
-        //stepper.maximumValue = 1000
+        stepper.maximumValue = 10000
         
         
         saveButton.isEnabled = false 
@@ -71,7 +71,6 @@ class AddCounterViewController: UIViewController, UITextFieldDelegate {
         
         counterItem.name = nameText.text
         counterItem.count = Int64(countLabel.text!)!
-//        counterItem.stepValue = Int16(stepper.stepValue)
         
         
         appDelegate.saveContext()
@@ -84,35 +83,15 @@ class AddCounterViewController: UIViewController, UITextFieldDelegate {
         stepper.stepValue = 1
         
         
-        if (count == 1000) {
-            countLabel.text = "1K"
-        } else {
+
             countLabel.text = String(count)
-        }
+
         
         
         
     }
     
-//    switch stepValuePicker.selectedSegmentIndex {
-//           case 0:
-//    stepper.stepValue = 1
-//    default:
-//                break;
-//            }
-//        }
 
-//        switch stepValuePicker.selectedSegmentIndex {
-//        case 0:
-//            stepper.stepValue = 1
-//            //        case 1:
-//            //            stepper.stepValue = 10
-//            //        case 2:
-//        //            stepper.stepValue = 100
-//        default:
-//            break;
-//        }
-//    }
 
     // MARK: Text Field Stuff
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
